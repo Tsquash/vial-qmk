@@ -15,28 +15,19 @@
  */
 #pragma once
 
-#include "config_common.h"
+#include "quantum.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0x5351 // SQ
-#define PRODUCT_ID 0x4657 // FW
-#define DEVICE_VER 0x0001
-#define MANUFACTURER squashkb
-#define PRODUCT free willy
+#define XXX KC_NO
 
-/* key matrix size */
-#define MATRIX_ROWS 4
-#define MATRIX_COLS 10
-
-#define MATRIX_ROW_PINS { F4, F5, F6, F7 }
-#define MATRIX_COL_PINS { D3, D2, D1, D0, D4, C6, D7, E6, B4, B5 }
-//#define MATRIX_COL_PINS { B5, B4, E6, D7, C6, D4, D0, D1, D2, D3 }
-#define UNUSED_PINS
-
-/* COL2ROW, ROW2COL*/
-#define DIODE_DIRECTION COL2ROW
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
-
-#define TAPPING_TERM 200
+#define LAYOUT( \
+  K00, K01, K02, K03, K04, K05, K06, K07, K08, K09, \
+  K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, \
+  K20, K21, K22, K23, K24, K25, K26, K27, K28, K29, \
+            K32, K33, K34, K35, K36, K37           \
+) \
+{ \
+  { K00, K01, K02, K03, K04, K05, K06, K07, K08, K09  }, \
+  { K10, K11, K12, K13, K14, K15, K16, K17, K18, K19  }, \
+  { K20, K21, K22, K23, K24, K25, K26, K27, K28, K29  }, \
+  { XXX, XXX, K32, K33, K34, K35, K36, K37, XXX, XXX  }  \
+}
